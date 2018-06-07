@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collector Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="crystal.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <!-- <script src="jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="crystal.js"></script> -->
+</head>
+     
+<body>
+    <div class="container">
+
+            <div class="jumbotron" style="background-color:green; color: white">
+                <div class="container">
+                    <h1 class="text-center"><strong>Crystal Collector Game</strong></h1>
+                </div>
+            </div>
+            <!-- INSTRUCTIONS  -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="panel panel-default">
+                           <!-- <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div> -->
+
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center p-3 mb-2 bg-primary text-white">Instructions</h3>
+                        </div>
+                        <div class="panel-body">
+                           <p>
+                            
+                            The game restarts whenever the player wins or loses.
+                            
+                            When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+                        
+                            The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+                            
+                            Option 1 Game design notes
+                            
+                            The random number shown at the start of the game should be between 19 - 120.
+                            Each crystal should have a random hidden value between 1 - 12.
+                           </p> 
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+    
+            <div class= "row">
+                <!--Target score-->
+                <div class="col-lg-3">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title text-center p-3 mb-2 bg-secondary">Target Score</h3>
+                            </div>
+                            <div class="panel-body">
+                                <h3 class="text-center" id="targetScore"></h3>
+                            </div>
+                        </div>
+                </div>
+
+
+                <!-- Your Score -->
+                <div class="col-lg-3">
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center p-3 mb-2 bg-secondary">Your Score</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="text-center" id="yourScore"></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Crystals -->
+                <div class="col-lg-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title p-3 mb-2 bg-secondary text-center">Crystal Selection</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <img src="assets/images/blue.png" alt="blue crystal" id="blue">
+                            <img src="assets/images/green.png" alt="green crystal" id="green">
+                            <img src="assets/images/red.png" alt="red crystal" id="red">
+                            <img src="assets/images/yellow.png" alt="yellow crystal" id="yellow">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Counter Row -->
+            <div class="row">
+                <!-- Win Count -->
+                <div class="col-lg-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title p-3 mb-2 bg-info text-center">Wins</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="text-center" id="winCount">0</h3>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Loss Count -->
+                    <div class="col-lg-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title p-3 mb-2 bg-info text-center">Losses</h3>
+                            </div>
+                            <div class="panel-body">
+                                <h3 class="text-center" id="lossCount">0</h3>
+                            </div>
+                        </div>
+                    </div>
+        
+
+            </div>
+
+    </div>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="crystal.js"></script>
+
+
+</body>
+</html>

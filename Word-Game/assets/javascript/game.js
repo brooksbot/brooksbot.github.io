@@ -10,7 +10,7 @@ var $losses = document.getElementById("losses");
 
 // create variables for game (wordBank, wins, losses, picked word, guesses left, game running,
 //  picked word placeholder, guessed letter bank, incorrect letter bank)
-var wordBank = [ "Daenerys Targaryen", "Jon Snow" , "Tyrion Lannister" , "Cersei Lannister" , "Arya Stark", "Sansa Stark" ];
+var wordBank = ["Daenerys Targaryen", "Jon Snow" , "Tyrion Lannister" , "Cersei Lannister" , "Arya Stark", "Sansa Stark"];
 var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
@@ -30,13 +30,14 @@ function newGame() {
     pickedWordPlaceholderArr = [];
 
     // pick a new word....
-    pickedWord = wordBank[Math.floor(Math.random() + wordBank.length)];
+    pickedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
     // create a placeholder....
     for (var i = 0; i < pickedWord.length; i++) {
         if (pickedWord[i] === " ") {
-          pickedWordPlaceholderArr.push(" ");
-        } else {
+            pickedWordPlaceholderArr.push(" ");
+        }
+        else {
             pickedWordPlaceholderArr.push("_");
         }
     }
@@ -46,6 +47,9 @@ function newGame() {
     $placeholders.textContent = pickedWordPlaceholderArr.join(" ");
     $guessedLetters.textContent = incorrectLetterBank;
 }
+
+
+
 
 
 
@@ -60,7 +64,7 @@ function letterGuess(letter) {
         //check if guessed letter is in picked word
 
         for (var i = 0; i < pickedWord.length; i++) {
-            if (pickedWord[i].toLowerCase[] === letter.toLowerCase()) {
+            if (pickedWord[i].toLowerCase() === letter.toLowerCase()) {
                 pickedWordPlaceholderArr[i] = pickedWord[i];
             }
         }
