@@ -4,17 +4,7 @@
 clicking on crystals will add set value of points to player's score
 */
 
-// var randomResult;
-// var lose;
-// var win;
-// // console.log(randomResult)
-// for (var i = 0; i < 4; i++) {
 
-//     var crystal = $("<div>");
-//         crystal.attr("class", 'crystal')
-//     $(".crystals").append(crystal);
-
-// }
 
 //Global Variables
 //----------------------------------------------------------

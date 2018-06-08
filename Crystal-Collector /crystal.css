@@ -1,11 +1,8 @@
-
-
 body {
-    background-image: url('../images/light-grey-terrazzo.png');
+    background-image: url('./assets/images/light-grey-terrazzo.png');
+    /* background-image: url('./assets/images/gems-836763_640.png'); */
     background-repeat: repeat;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: auto;
-    color: #777777;
+ 
 }
 
 
