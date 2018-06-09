@@ -1,6 +1,6 @@
  // Get references for DOM elements
 var $newGameButton = document.getElementById("new-game-button");
-var $placeholders = document.getElementById("placeholders");
+var $placeholders = document.getElementById("placeholder");
 var $guessedLetters = document.getElementById("guessed-letters");
 var $guessesLeft = document.getElementById("guesses-left");
 var $wins = document.getElementById("wins");
