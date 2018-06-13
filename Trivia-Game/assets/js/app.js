@@ -1,45 +1,45 @@
 $("#start").click(function(){
     game.start();
-    // console.log("You clicked?")
+    
 })
 
 // $("#done").click(function() {
-//     game.done();
+//     game.endgame();
 // })
 
 
 
 var questions = [{
-    question: "What was the Disney movie with 'Buzz' as a main character?",
-    answers:["A Bug's Life","Monster Inc", "Toy Story", "The Lion King"],
-    correctAnswer:"Toy Story"
+    question: "What does O.W.L stand for?",
+    answers:["Ordinary Wizarding Level", "Official Wharthog Level", "Outstanding Wizard Levitation", "Owler Wolf Lace"],
+    correctAnswer:"Ordinary Wizarding Level"
 }, {
-    question: "What is the best flavor of ice cream?",
-    answers:["Vanilla","Chocolate", "Strawberry", "Mint Chip"],
-    correctAnswer:"Mint Chip"
+    question: "What is the name of Fred and George's joke shop?",
+    answers:["Weasleys' Joke Shop","Fred and George's Gag shop", "Weasleys' Wizard Wheezes", "F.G. Inc."],
+    correctAnswer:"Weasleys' Wizard Wheezes"
 }, {
-    question: "Who does Harry Potter end up marrying",
-    answers:["Hermione","Voldemort", "Hagrid", "Ginny Weasley"],
+    question: "What is Harry's 2nd born child's name?",
+    answers:["James Sirius Potter","Albus Severus Potter", "Lily Luna Potter", "James Lily Potter"],
     correctAnswer:"Ginny Weasley"
 }, {
-    question: "Which Disney movie featured the song 'Never had a friend like me'?",
-    answers:["A Bug's Life","Monter Inc", "Alladin", "The Lion King"],
-    correctAnswer:"Alladin"
+    question: "How does Harry manage to breathe underwater during the second task of the Triwizard Tournament?",
+    answers:["He kisses a mermaid", "He transfigures into a shark", "He performs the bubble head charm", "He eats gillyweed"],
+    correctAnswer:"He eats gillyweed"
 }, {
-    question: "Who is the most decorated Olympic swimmer?",
-    answers:["Usain Bolt","Lindsey Vohn", "Michael Jordan", "Michael Phelps"],
-    correctAnswer:"Michael Phelps"
+    question: "Who guards the entrance to the Gryffindor common room?",
+    answers:["The Fat Lady", "The Bloody Baron", "Nearly Headless Nick", "Professor McGonnegal"],
+    correctAnswer:"The Fat Lady"
 }, {
-    question: "Which band sings 'Believer'?",
-    answers:["Nirvana","Imagine Dragons", "ABBA", "Del the Funky Homosapian"],
-    correctAnswer:"Believer"
+    question: "Who is NOT a member of the Order of the Phoenix?",
+    answers:["Cornelius Fudge","Professor Snape", "Mad Eye Moody", "Remus Lupin"],
+    correctAnswer:"Cornelius Fudge"
 }];
 
 
 var game = {
     correct: 0,
     incorrect: 0,
-    counter: 120,
+    counter: 60,
     countdown: function(){
         game.counter--;
         $('#counter').html(game.counter);
@@ -59,7 +59,11 @@ var game = {
                   $("#subwrapper").append("<input type='radio' name='question-" + i + "' value='" + questions[i].answers[j]+ "''>" + questions[i].answers[j]);
              }    
         }
-        $('#subwrapper').append('<br><button id="done">All Done</button>');           
+        $('#subwrapper').append('<br><button id="endgame">All Done!</button>');
+
+        $(document).on("click", "#endgame", function() {
+        game.done();
+        });           
     },
 
     done: function(){
@@ -128,18 +132,13 @@ var game = {
 
 };
 
-// $(document).on("click", "#endgame", function() {
-//     game.done();
-//   });
 
-  $(document).ready(function(){
-    $('<br><button id="done">All Done</button>').on("click", function(){
-        game.done();
-    });
-});
 
-// $(document).ready(function(){
-//     $("p").on("click", function(){
-//         alert("The paragraph was clicked.");
+//   $(document).ready(function(){
+//     $('<br><button id="endgame">All Done!</button>').on("click", function(){
+//         game.done();
 //     });
 // });
+
+
+
