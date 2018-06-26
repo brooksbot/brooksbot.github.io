@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- BOOTSTRAP JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <!-- MOMENT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron" style="background-color: #7F462C; color: white">
+            <h1 class="text-center">Train Time!</h1>
+            <h3 class="text-center">Schdule Your Ride!</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Current Train Schdule</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover" id="trainTable">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Fill with JQuery/Firebase -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>ADD TRAIN</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="">Train Name</label>
+                                <input type="text" class="form control" id="trainNameInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Destination</label>
+                                <input type="text" class="form control" id="destinationInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">First Train Time (HH:mm - Military Time)</label>
+                                <input type="text" class="form control" id="firstTrainInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Frequency (Min)</label>
+                                <input type="text" class="form control" id="frequencyInput">
+                            </div>
+                            <button type="button" class="btn btn-primary" id="addTrainBtn">Submit!</button>
+                        </form>
+                        <!-- TRY THESE IF PAGE IS RELOADING AFTER SUBMIT BUTTON IS CLICKED!! -->
+                        <!-- <form onsubmit="return false"> </form> -->
+                        <!-- <input type="submit" onclick="return false"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
