@@ -3,9 +3,9 @@ $("#start").click(function(){
     
 })
 
-// $("#done").click(function() {
-//     game.endgame();
-// })
+$("#endgame").click(function() {
+    game.done();
+})
 
 
 
