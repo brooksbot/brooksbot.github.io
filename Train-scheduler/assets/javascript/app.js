@@ -23,21 +23,27 @@
           firstTrain: firstTrain,
           frequency: frequency
       }
-      console.log(newTrain);
+	  // Uploads train data to the database
+	  trainData.ref().push(newTrain);
+	  
+	  //Logs everything to console
+	  console.log(newTrain.name);
+	  console.log(newTrain.destination);
+	  console.log(newTrain.firstTrain);
+	  console.log(newTrain.frequency);
 
-      trainData.ref().push(newTrain);
       alert("Train Added!");
-
+	  // Clears all of the text-boxes
       $("#trainNameInput").val("");
       $("#destinationInput").val("");
       $("#firstTrainInput").val("");
       $("#frequencyInput").val("");
-
+	  // Prevents moving to a new page
       return false;
-  })
+  });
 
-  trainData.ref().on("child_added",function(snapshot){
-      var name = snapshot.val().name;
+  trainData.ref().on("child_added",function(snapshot, prevChildKey){
+      var trainName = snapshot.val().name;
       var destination = snapshot.val().destination;
       var frequency = snapshot.val().frequency;
       var firstTrain = snapshot.val().firstTrain;
@@ -46,4 +52,18 @@
       var minutes = frequency -remainder;
       var arrival = moment().add(minutes, "m").format("hh:mm A");
 
-  })
+	// Add each train's data into the table
+	$("#trainTable > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + firstTrain + "</td><td>" + trainMinsAway + "</td><td>");
+  });
+
+
+
+
+
+
+
+
+
+
+
+
