@@ -64,7 +64,7 @@
     });
   
     $("#add-search").on("click", function() {
-      var newSearch = $("#search-input").val();
+      var newSearch = $("#search-input").eq(0).val();
         topics.push(newSearch);
         $("#buttonArea").empty();
         for (var i = 0; i < topics.length; i++) {
